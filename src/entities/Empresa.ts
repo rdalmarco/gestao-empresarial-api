@@ -1,17 +1,16 @@
-import { uuid } from "uuidv4";
-import { Endereco } from "./Endereco.ts";
+import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
+import { v4 as uuid } from "uuid";
 
+@Entity()
 export class Empresa {
-    public readonly id!: string;
+    @PrimaryGeneratedColumn()
+    public readonly id: string;
     
-    public razaoSocial!: string;
-    public endereco!: Endereco;
+    @Column()
+    public razaoSocial: string;
 
     constructor(props: Omit<Empresa, 'id'>, id?: string) {
         Object.assign(this, props);
-
-        if (!id) {
-            this.id = uuid();
-        }
+        this.id = id ?? uuid();
     }
 }
