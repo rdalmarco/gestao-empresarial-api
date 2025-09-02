@@ -11,5 +11,5 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
   },
-  "include": ["src/**/*.ts", "src/usesCases/CriarEmpresa/CriarEmpresaRequestDTO.ts", "src/usesCases/CriarEmpresa/CriarEmpresaUseCase.ts"]
+  "include": ["src/**/*.ts", "src/usesCases/CreateCompanie/CreateCompanieRequestDTO.ts", "src/usesCases/CreateCompanie/CreateCompanieUseCase.ts"]
 }

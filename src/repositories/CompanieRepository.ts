@@ -1,4 +1,4 @@
-export interface EmpresaRepository {
+export interface CompanieRepository {
     create(data: any): Promise<void>;
     findById(id: string): Promise<any>;
     findAll(): Promise<any[]>;

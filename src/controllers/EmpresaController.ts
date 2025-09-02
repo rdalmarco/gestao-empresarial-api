@@ -1,19 +1,27 @@
-import { ListarEmpresasUseCase } from "../usesCases/ListarEmpresas/ListarEmpresasUseCase.js";
-import { CriarEmpresaUseCase } from "../usesCases/CriarEmpresa/CriarEmpresaUseCase.js";
-import { EmpresaRepositoryImpl } from "../repositories/EmpresaRepositoryImpl.js";
+import { ListCompaniesUseCase } from "../usesCases/ListCompanies/ListCompaniesUseCase.js";
+import { CreateCompanieUseCase } from "../usesCases/CreateCompanie/CreateCompanieUseCase.js";
+import { CompanieRepositoryImpl } from "../repositories/CompanieRepositoryImpl.js";
+import { FindCompanieByIdUseCase } from "../usesCases/FindCompanieById/FindCompanieByIdUseCase.js";
 
-export class EmpresaController {
+export class CompanieController {
 
-    static async listar(request: any, response: any) {
-        const empresasRepository = new EmpresaRepositoryImpl(); 
-        const useCase = new ListarEmpresasUseCase(empresasRepository); 
-        const empresas = await useCase.execute();
-        return response.status(200).json(empresas);
+    static async list(request: any, response: any) {
+        const companieRepository = new CompanieRepositoryImpl();
+        const useCase = new ListCompaniesUseCase(companieRepository);
+        const companies = await useCase.execute();
+        return response.status(200).json(companies);
     }
 
-    static async criar(request: any, response: any) {
-        const empresasRepository = new EmpresaRepositoryImpl();
-        const useCase = new CriarEmpresaUseCase(empresasRepository);
+    static async listById(request: any, response: any) {
+        const companieRepository = new CompanieRepositoryImpl();
+        const useCase = new FindCompanieByIdUseCase(companieRepository);
+        const companie = await useCase.execute({ id: request.params.id });
+        return response.status(200).json(companie);
+    }    
+
+    static async create(request: any, response: any) {
+        const companieRepository = new CompanieRepositoryImpl();
+        const useCase = new CreateCompanieUseCase(companieRepository);
         const empresa = await useCase.execute(request.body);
         return response.status(201).json(empresa);
     }

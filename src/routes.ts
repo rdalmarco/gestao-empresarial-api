@@ -1,36 +1,11 @@
 import { Router } from "express";
-import { EmpresaController } from "./controllers/EmpresaController.js";
+import { CompanieController } from "./controllers/EmpresaController.js";
 
 const router = Router();
 
 /**
  * @swagger
- * /:
- *   get:
- *     summary: Inicial
- *     responses:
- *       200:
- *         description: Inicial
- */
-router.get('/', (request, response) => {
-  return response.status(200).json([]);
-});
-
-/**
- * @swagger
- * /empresas:
- *   get:
- *     summary: Lista todas as empresas
- *     responses:
- *       200:
- *         description: Lista de empresas
- */
-router.get('/empresas', EmpresaController.listar);
-
-
-/**
- * @swagger
- * /empresa/criar:
+ * /companies:
  *   post:
  *     summary: Criar Empresa
  *     requestBody:
@@ -47,6 +22,37 @@ router.get('/empresas', EmpresaController.listar);
  *       201:
  *         description: Empresa criada com sucesso
  */
-router.post('/empresa/criar', EmpresaController.criar);
+router.post('/companies', CompanieController.create);
+
+/**
+ * @swagger
+ * /companies:
+ *   get:
+ *     summary: Lista todas as empresas
+ *     responses:
+ *       200:
+ *         description: Lista de empresas
+ */
+router.get('/companies', CompanieController.list);
+
+/**
+ * @swagger
+ * /companies/{id}:
+ *   get:
+ *     summary: Busca uma empresa pelo ID
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         description: ID da empresa
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Empresa encontrada
+ *       404:
+ *         description: Empresa não encontrada
+ */
+router.get('/companies/:id', CompanieController.listById);
 
 export { router };

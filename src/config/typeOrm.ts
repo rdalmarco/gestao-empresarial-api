@@ -1,5 +1,5 @@
 import { DataSource } from "typeorm";
-import { Empresa } from "../entities/Empresa.js";
+import { Companie } from "../entities/Companie.js";
 
 export const AppDataSource = new DataSource({
     type: "postgres",
@@ -10,7 +10,7 @@ export const AppDataSource = new DataSource({
     database: process.env.DB_NAME || "gemp",
     synchronize: true, 
     logging: false,
-    entities: [ Empresa ],
+    entities: [ Companie ],
     migrations: [],
     subscribers: [],
 });
