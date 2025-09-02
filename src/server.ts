@@ -1,8 +1,6 @@
 import { app } from "./app.js";
 import { AppDataSource } from "./config/typeOrm.js";
 
-app.listen(3000)
-
 AppDataSource.initialize()
   .then(() => {
     app.listen(3000);

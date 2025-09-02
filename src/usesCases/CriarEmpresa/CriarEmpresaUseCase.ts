@@ -1,10 +1,10 @@
-import { Empresa } from "../../entities/Empresa";
-import type { EmpresasRepository } from "../../repositories/EmpresasRepository.ts";
+import { Empresa } from "../../entities/Empresa.js";
+import type { EmpresaRepository } from "../../repositories/EmpresaRepository.js";
 import type { CriarEmpresaRequestDTO } from "./CriarEmpresaRequestDTO.ts";
 
-export class CriarEmpresa {
+export class CriarEmpresaUseCase {
     constructor(
-        private empresasRepository: EmpresasRepository
+        private empresasRepository: EmpresaRepository
     ) {}
 
      async execute(data: CriarEmpresaRequestDTO) {
