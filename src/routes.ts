@@ -27,6 +27,8 @@ const router = Router();
  *     responses:
  *       201:
  *         description: Empresa criada com sucesso
+ *       400:
+ *         description: Dados inválidos
  */
 router.post('/companies', CompanieController.create);
 
@@ -56,6 +58,8 @@ router.get('/companies', CompanieController.list);
  *     responses:
  *       200:
  *         description: Empresa encontrada
+ *       400:
+ *         description: Dados inválidos
  *       404:
  *         description: Empresa não encontrada
  */
@@ -86,6 +90,8 @@ router.get('/companies/:id', CompanieController.listById);
  *     responses:
  *       200:
  *         description: Empresa atualizada
+ *       400:
+ *         description: Dados inválidos
  *       404:
  *         description: Empresa não encontrada
  */
@@ -106,6 +112,8 @@ router.put('/companies/:id', CompanieController.update);
  *     responses:
  *       200:
  *         description: Empresa deletada
+ *       400:
+ *         description: Dados inválidos
  *       404:
  *         description: Empresa não encontrada
  */
