@@ -1,6 +1,6 @@
-import { ErrorNotFound } from "../../erros/ErrorNotFound";
-import { CompanieRepository } from "../../repositories/CompanieRepository";
-import type { DeleteCompanieRequestDTO } from "./DeleteCompanieRequestDTO";
+import { ErrorNotFound } from "../../errors/ErrorNotFound.js";
+import { CompanieRepository } from "../../repositories/CompanieRepository.js";
+import type { DeleteCompanieRequestDTO } from "./DeleteCompanieRequestDTO.js";
 
 
 export class DeleteCompanieUseCase {

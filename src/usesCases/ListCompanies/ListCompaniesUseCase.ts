@@ -1,4 +1,4 @@
-import { CompanieRepository } from "../../repositories/CompanieRepository";
+import { CompanieRepository } from "../../repositories/CompanieRepository.js";
 
 export class ListCompaniesUseCase {
     constructor(

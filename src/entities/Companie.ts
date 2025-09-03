@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn } from "typeorm";
 import { v4 as uuid } from "uuid";
 
 export enum StatusRegistro {
@@ -17,10 +17,19 @@ export class Companie {
     @Column()
     public razaoSocial!: string;
 
+    @Column()
+    public email!: string;
+
+    @CreateDateColumn({ type: 'timestamp' })
+    public dataCriacao!: Date;
+
+    @UpdateDateColumn({ type: 'timestamp' })
+    public dataAtualizacao!: Date;
+
     @Column({ type: "int", default: StatusRegistro.ATIVA })
     public statusRegistro!: StatusRegistro;
 
-    constructor(props: Omit<Companie, 'id'>, id?: string) {
+    constructor(props:  Omit<Companie, 'id' | 'dataCriacao' | 'dataAtualizacao' | 'statusRegistro'>, id?: string) {
         Object.assign(this, props);
         this.id = id ?? uuid();
     }

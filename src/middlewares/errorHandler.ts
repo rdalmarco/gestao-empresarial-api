@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
-import { ErrorApi } from '../errors/ErrorApi';
+import { ErrorApi } from '../errors/ErrorApi.js';
+
 
 export const errorHandler = (
   error: Error,
@@ -15,6 +16,7 @@ export const errorHandler = (
     });
   }
 
+  console.error(error);
   return res.status(500).json({
     status: 500,
     title: 'Erro Interno',

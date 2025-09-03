@@ -1,3 +1,6 @@
+*Limpar Cache (usar com cuidado).
+docker container prune 
+
 *Buildar e Rodar
 docker-compose up --build
 

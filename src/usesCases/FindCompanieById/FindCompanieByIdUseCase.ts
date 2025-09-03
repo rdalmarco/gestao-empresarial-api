@@ -1,5 +1,5 @@
-import { CompanieRepository } from "../../repositories/CompanieRepository";
-import type { FindCompanieByIdRequestDTO } from "./FindCompanieByIdRequestDTO";
+import { CompanieRepository } from "../../repositories/CompanieRepository.js";
+import type { FindCompanieByIdRequestDTO } from "./FindCompanieByIdRequestDTO.js";
 
 
 export class FindCompanieByIdUseCase {

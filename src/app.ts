@@ -4,6 +4,7 @@ import "reflect-metadata"
 import { swaggerUi, swaggerSpec } from "./swagger.js"
 import { errorHandler } from './middlewares/errorHandler.js'
 
+
 const app = express()
 
 app.use(express.json())

@@ -1,6 +1,6 @@
-import { ErrorNotFound } from "../../errors/ErrorNotFound";
-import { CompanieRepository } from "../../repositories/CompanieRepository";
-import type { UpdateCompanieRequestDTO } from "./UpdateCompanieRequestDTO";
+import { ErrorNotFound } from "../../errors/ErrorNotFound.js";
+import { CompanieRepository } from "../../repositories/CompanieRepository.js";
+import type { UpdateCompanieRequestDTO } from "./UpdateCompanieRequestDTO.js";
 
 
 export class UpdateCompanieUseCase {

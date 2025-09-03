@@ -18,6 +18,12 @@ const router = Router();
  *               razaoSocial:
  *                 type: string
  *                 example: Nome da Empresa
+ *               email:
+ *                 type: string
+ *                 example: email@empresa.com
+ *               cnpj:
+ *                 type: string
+ *                 example: 12.345.678/0001-90
  *     responses:
  *       201:
  *         description: Empresa criada com sucesso

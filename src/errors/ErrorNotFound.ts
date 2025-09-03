@@ -1,4 +1,4 @@
-import { ErrorApi } from './ErrorApi';
+import { ErrorApi } from './ErrorApi.js';
 
 export class ErrorNotFound extends ErrorApi {
   constructor(message: string) {
