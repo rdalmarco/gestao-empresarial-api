@@ -35,7 +35,7 @@ router.get('/', (request, response) => response.send('API de Gestão de Empresas
  *                 example: email@empresa.com
  *               cnpj:
  *                 type: string
- *                 example: 12.345.678/0001-90
+ *                 example: 00.000.000/0000-00
  *     responses:
  *       201:
  *         description: Empresa criada com sucesso
@@ -98,7 +98,7 @@ router.get('/companies/:id', CompanieController.listById);
  *             properties:
  *               razaoSocial:
  *                 type: string
- *                 example: "Empresa Exemplo LTDA"
+ *                 example: "Nome da Empresa Atualizado"
  *     responses:
  *       200:
  *         description: Empresa atualizada
