@@ -1,7 +1,19 @@
-import { Router } from "express";
+import { response, Router } from "express";
 import { CompanieController } from "./controllers/CompanieController.js";
 
 const router = Router();
+
+/**
+ * @swagger
+ * /:
+ *   get:
+ *     summary: API de Gestão de Empresas
+ *     responses:
+ *       200:
+ *         description: Faz conexão inicial com a API
+ */
+router.get('/', (request, response) => response.send('API de Gestão de Empresas. Use /companies para gerenciar empresas.'));
+
 
 /**
  * @swagger
