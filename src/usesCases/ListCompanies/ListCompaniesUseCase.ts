@@ -11,7 +11,7 @@ export class ListCompaniesUseCase {
 
         const formatCompanies = companies.map(company => ({
         ...company,
-        statusRegistro: company.statusRegistro === 1 ? StatusRegistro.ATIVA : StatusRegistro.INATIVA
+        statusRegistro: company.statusRegistro === 1 ? "Ativa" : "Inativa"
      }));
 
         return formatCompanies;
