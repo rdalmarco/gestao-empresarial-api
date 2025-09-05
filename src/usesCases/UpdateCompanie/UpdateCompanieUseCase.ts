@@ -11,7 +11,6 @@ export class UpdateCompanieUseCase {
     ) {}
 
     async execute(data: UpdateCompanieRequestDTO) {
-         //Valida os dados da requisição
           const validatedData = await updateCompanieSchema.safeParse(data);
           if(!validatedData.success) {
              throw new ErrorDadosInvalidos(validatedData.error.issues.map(issue => issue.message).join(', '));
