@@ -1,0 +1,159 @@
+[33mcommit 44dff981a328d79f483df5f7028785e681eb38b0[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Rafael Dalmarco <111667173+rdalmarco@users.noreply.github.com>
+Date:   Thu Sep 4 22:03:15 2025 -0300
+
+    finish
+
+ gestao-empresarial-api.tar | Bin [31m1239357440[m -> [32m0[m bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+[33mcommit 0645f6a7cb69cfd68f5d6094a3a77d8f0d23312a[m
+Author: Rafael Dalmarco <111667173+rdalmarco@users.noreply.github.com>
+Date:   Thu Sep 4 22:02:35 2025 -0300
+
+    finish
+
+ gestao-empresarial-api.tar | Bin [31m0[m -> [32m1239357440[m bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+[33mcommit a8a372896102f4477c8b5cef0fe84692edae8bd0[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Rafael Dalmarco <111667173+rdalmarco@users.noreply.github.com>
+Date:   Thu Sep 4 21:24:10 2025 -0300
+
+    status register list companies adjust
+
+ src/usesCases/UpdateCompanie/UpdateCompanieUseCase.ts | 1 [31m-[m
+ 1 file changed, 1 deletion(-)
+
+[33mcommit fd8e6cd22401dd355e68d87e893f1f58b38e0cdd[m
+Author: Rafael Dalmarco <111667173+rdalmarco@users.noreply.github.com>
+Date:   Thu Sep 4 20:28:45 2025 -0300
+
+    cors config
+
+ package-lock.json                                  | 34 [32m++++++++++++++++++++++[m
+ package.json                                       |  2 [32m++[m
+ src/app.ts                                         |  7 [32m+++++[m
+ .../ListCompanies/ListCompaniesUseCase.ts          |  2 [32m+[m[31m-[m
+ 4 files changed, 44 insertions(+), 1 deletion(-)
+
+[33mcommit 24efbfa6de6d50a218d198fc2de525181556cca8[m
+Author: Rafael Dalmarco <111667173+rdalmarco@users.noreply.github.com>
+Date:   Thu Sep 4 19:58:21 2025 -0300
+
+    Endpoint List Companies Adjusted Status
+
+ src/usesCases/ListCompanies/ListCompaniesUseCase.ts | 10 [32m+++++++++[m[31m-[m
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+[33mcommit 601537c997a364f34cfbc3af84d4168eb03ab556[m
+Author: Rafael Dalmarco <111667173+rdalmarco@users.noreply.github.com>
+Date:   Thu Sep 4 19:25:29 2025 -0300
+
+    doc swagger ajust
+
+ src/routes.ts | 4 [32m++[m[31m--[m
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+[33mcommit 35ae900c255f92644799aaa447aec5992c4f560a[m
+Author: Rafael Dalmarco <111667173+rdalmarco@users.noreply.github.com>
+Date:   Thu Sep 4 19:24:07 2025 -0300
+
+    add test endpoint get /
+
+ src/routes.ts | 14 [32m+++++++++++++[m[31m-[m
+ 1 file changed, 13 insertions(+), 1 deletion(-)
+
+[33mcommit 7007b43f4d059c0ee607964928ba50e1ae02a755[m
+Author: Rafael Dalmarco <111667173+rdalmarco@users.noreply.github.com>
+Date:   Tue Sep 2 23:18:09 2025 -0300
+
+    Add UseCases Schemas and Swagger Tests
+
+ src/routes.ts                                             |  8 [32m++++++++[m
+ src/usesCases/DeleteCompanie/DeleteCompanieSchema.ts      | 10 [32m++++++++++[m
+ src/usesCases/DeleteCompanie/DeleteCompanieUseCase.ts     | 10 [32m+++++++++[m[31m-[m
+ src/usesCases/FindCompanieById/FindCompanieByIdSchema.ts  | 10 [32m++++++++++[m
+ src/usesCases/FindCompanieById/FindCompanieByIdUseCase.ts |  9 [32m++++++++[m[31m-[m
+ src/usesCases/UpdateCompanie/UpdateCompanieSchema.ts      |  6 [32m++++++[m
+ src/usesCases/UpdateCompanie/UpdateCompanieUseCase.ts     | 12 [32m++++++++++[m[31m--[m
+ 7 files changed, 61 insertions(+), 4 deletions(-)
+
+[33mcommit 50b4950e17e4f8aa036b7d08e6daf0b801145600[m
+Author: Rafael Dalmarco <111667173+rdalmarco@users.noreply.github.com>
+Date:   Tue Sep 2 21:59:47 2025 -0300
+
+    Implements Validations, ErrorHandler, Tests Swagger
+
+ README.txt                                                |  3 [32m+++[m
+ src/app.ts                                                |  1 [32m+[m
+ src/entities/Companie.ts                                  | 13 [32m+++++++++++[m[31m--[m
+ src/entities/CompanieSchema.ts                            | 12 [32m++++++++++++[m
+ src/errors/ErrorCnpjDuplicate.ts                          |  5 [32m++[m[31m---[m
+ src/errors/ErrorDadosInvalidos.ts                         |  7 [32m+++++++[m
+ src/errors/ErrorNotFound.ts                               |  2 [32m+[m[31m-[m
+ src/middlewares/errorHandler.ts                           |  4 [32m+++[m[31m-[m
+ src/routes.ts                                             |  6 [32m++++++[m
+ src/usesCases/CreateCompanie/CreateCompanieRequestDTO.ts  |  5 [32m++++[m[31m-[m
+ src/usesCases/CreateCompanie/CreateCompanieSchema.ts      |  8 [32m++++++++[m
+ src/usesCases/CreateCompanie/CreateCompanieUseCase.ts     | 14 [32m++++++++++++[m[31m--[m
+ src/usesCases/DeleteCompanie/DeleteCompanieUseCase.ts     |  6 [32m+++[m[31m---[m
+ src/usesCases/FindCompanieById/FindCompanieByIdUseCase.ts |  4 [32m++[m[31m--[m
+ src/usesCases/ListCompanies/ListCompaniesUseCase.ts       |  2 [32m+[m[31m-[m
+ src/usesCases/UpdateCompanie/UpdateCompanieUseCase.ts     |  6 [32m+++[m[31m---[m
+ 16 files changed, 79 insertions(+), 19 deletions(-)
+
+[33mcommit 809658b140b3d46b8f67cb05867aec17b51bfe9e[m
+Author: Rafael Dalmarco <111667173+rdalmarco@users.noreply.github.com>
+Date:   Tue Sep 2 21:07:53 2025 -0300
+
+    Padronização de Respostas API and Zod Validação Campos
+
+ README.txt                                         |    6 [32m+[m
+ package-lock.json                                  | 1023 [32m+++++++++++++++++++[m[31m-[m
+ package.json                                       |    4 [32m+[m[31m-[m
+ src/app.ts                                         |    3 [32m+[m
+ src/controllers/CompanieController.ts              |   60 [32m++[m
+ src/controllers/EmpresaController.ts               |   28 [31m-[m
+ src/entities/Companie.ts                           |   11 [32m+[m
+ src/entities/Endereco.ts                           |    6 [31m-[m
+ src/errors/ErrorApi.ts                             |    9 [32m+[m
+ src/errors/ErrorCnpjDuplicate.ts                   |    8 [32m+[m
+ src/errors/ErrorNotFound.ts                        |    7 [32m+[m
+ src/middlewares/errorHandler.ts                    |   23 [32m+[m
+ src/repositories/CompanieRepository.ts             |    5 [32m+[m[31m-[m
+ src/repositories/CompanieRepositoryImpl.ts         |   16 [32m+[m[31m-[m
+ src/routes.ts                                      |   52 [32m+[m[31m-[m
+ .../CreateCompanie/CreateCompanieRequestDTO.ts     |    4 [32m+[m
+ .../CreateCompanie/CreateCompanieUseCase.ts        |   10 [32m+[m[31m-[m
+ .../DeleteCompanie/DeleteCompanieRequestDTO.ts     |    3 [32m+[m
+ .../DeleteCompanie/DeleteCompanieUseCase.ts        |   18 [32m+[m
+ .../UpdateCompanie/UpdateCompanieRequestDTO.ts     |    4 [32m+[m
+ .../UpdateCompanie/UpdateCompanieUseCase.ts        |   18 [32m+[m
+ 21 files changed, 1258 insertions(+), 60 deletions(-)
+
+[33mcommit 6e7284cc5957ec997d1f09f6fada0e23139b4a13[m
+Author: Rafael Dalmarco <111667173+rdalmarco@users.noreply.github.com>
+Date:   Mon Sep 1 23:39:38 2025 -0300
+
+    Find By ID Endpoint
+
+ src/config/typeOrm.ts                              |  4 [32m+[m[31m-[m
+ src/controllers/EmpresaController.ts               | 32 [32m++++++[m[31m-----[m
+ src/entities/{Empresa.ts => Companie.ts}           |  4 [32m+[m[31m-[m
+ ...{EmpresaRepository.ts => CompanieRepository.ts} |  2 [32m+[m[31m-[m
+ src/repositories/CompanieRepositoryImpl.ts         | 25 [32m+++++++++[m
+ src/repositories/EmpresaRepositoryImpl.ts          | 25 [31m---------[m
+ src/routes.ts                                      | 62 [32m++++++++++++[m[31m----------[m
+ .../CreateCompanie/CreateCompanieRequestDTO.ts     |  3 [32m++[m
+ .../CreateCompanie/CreateCompanieUseCase.ts        | 14 [32m+++++[m
+ .../CriarEmpresa/CriarEmpresaRequestDTO.ts         |  3 [31m--[m
+ src/usesCases/CriarEmpresa/CriarEmpresaUseCase.ts  | 14 [31m-----[m
+ .../FindCompanieById/FindCompanieByIdRequestDTO.ts |  3 [32m++[m
+ .../FindCompanieById/FindCompanieByIdUseCase.ts    | 13 [32m+++++[m
+ .../ListCompanies/ListCompaniesUseCase.ts          | 11 [32m++++[m
+ .../ListarEmpresas/ListarEmpresasUseCase.ts        | 11 [31m----[m
+ tsconfig.json                                      |  2 [32m+[m[31m-[m
+ 16 files changed, 129 insertions(+), 99 deletions(-)
+
+[3
