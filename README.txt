@@ -1,4 +1,4 @@
-*Como rodar aplicação:
+# Como rodar aplicação:
 
 1 - Baixar repositório
 2 - Navegar até a pasta raiz
