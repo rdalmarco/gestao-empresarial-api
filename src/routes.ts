@@ -25,7 +25,7 @@ router.get('/', (request, response) => response.send('API de Gestão de Empresas
  *       content:
  *         application/json:
  *           schema:
- *             type: object
+ *             type: objectg
  *             properties:
  *               razaoSocial:
  *                 type: string
